@@ -172,8 +172,8 @@ Value * VerifyTrustZoneFn(const char *name, State *state, const std::vector<std:
                 name, ret);
     }
 
-	std::vector<std::string> tz_version;
-    if (!ReadArgs(state, argv, &tz_version)) {
+    char** tz_version = ReadVarArgs(state, argc, argv);
+    if (tz_version == NULL) {
         return ErrorAbort(state, kArgsParsingFailure, "%s() error parsing arguments", name);
     }
 
