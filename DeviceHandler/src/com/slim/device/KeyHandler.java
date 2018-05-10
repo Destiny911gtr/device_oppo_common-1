@@ -161,7 +161,7 @@ public class KeyHandler implements DeviceKeyHandler {
                         ActionConstants.ACTION_MEDIA_NEXT);
                         doHapticFeedback();
                 break;
-               */
+                */
             case MODE_TOTAL_SILENCE:
                 setZenMode(Settings.Global.ZEN_MODE_NO_INTERRUPTIONS);
                 break;
