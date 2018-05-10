@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- General strings -->
-    <string name="dlg_ok">OK</string>
+    <!-- string name="dlg_ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="reset">Reset</string>
     <string name="reset_message">Reset all entries to default?</string>
@@ -35,7 +35,7 @@
     <string name="gesture_arrow_up_title">Arrow up</string>
     <string name="gesture_circle_title">Circle</string>
     <string name="gesture_double_swipe_title">Double finger swipe down</string>
-    <string name="gesture_double_tap_title">Double tap</string>
+    <string name="gesture_double_tap_title">Double tap</string -->
 
      <!-- Notification slider -->
     <string name="notification_slider">Notification slider</string>

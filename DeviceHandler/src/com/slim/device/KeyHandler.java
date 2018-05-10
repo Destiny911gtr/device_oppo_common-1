@@ -37,7 +37,7 @@ import android.view.KeyEvent;
 
 import android.service.notification.ZenModeConfig;
 
-import com.slim.device.settings.ScreenOffGesture;
+//import com.slim.device.settings.ScreenOffGesture;
 
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
@@ -47,15 +47,17 @@ import com.android.internal.util.dotos.Action;
 public class KeyHandler implements DeviceKeyHandler {
 
     private static final String TAG = KeyHandler.class.getSimpleName();
-    private static final int GESTURE_REQUEST = 1;
+    //private static final int GESTURE_REQUEST = 1;
 
     // Supported scancodes
+    /**
     private static final int GESTURE_CIRCLE_SCANCODE = 250;
     private static final int GESTURE_SWIPE_DOWN_SCANCODE = 251;
     private static final int GESTURE_V_SCANCODE = 252;
     private static final int GESTURE_LTR_SCANCODE = 253;
     private static final int GESTURE_GTR_SCANCODE = 254;
     private static final int GESTURE_V_UP_SCANCODE = 255;
+    */
     // Slider
     private static final int MODE_TOTAL_SILENCE = 600;
     private static final int MODE_ALARMS_ONLY = 601;
@@ -65,12 +67,14 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final int MODE_RING = 605;
 
     private static final int[] sSupportedGestures = new int[]{
+        /**
         GESTURE_CIRCLE_SCANCODE,
         GESTURE_SWIPE_DOWN_SCANCODE,
         GESTURE_V_SCANCODE,
         GESTURE_V_UP_SCANCODE,
         GESTURE_LTR_SCANCODE,
         GESTURE_GTR_SCANCODE,
+        */
         MODE_TOTAL_SILENCE,
         MODE_ALARMS_ONLY,
         MODE_PRIORITY_ONLY,
@@ -120,6 +124,7 @@ public class KeyHandler implements DeviceKeyHandler {
             KeyEvent event = (KeyEvent) msg.obj;
             String action = null;
             switch(event.getScanCode()) {
+            /**
             case GESTURE_CIRCLE_SCANCODE:
                 action = getGestureSharedPreferences()
                         .getString(ScreenOffGesture.PREF_GESTURE_CIRCLE,
@@ -156,6 +161,7 @@ public class KeyHandler implements DeviceKeyHandler {
                         ActionConstants.ACTION_MEDIA_NEXT);
                         doHapticFeedback();
                 break;
+               */
             case MODE_TOTAL_SILENCE:
                 setZenMode(Settings.Global.ZEN_MODE_NO_INTERRUPTIONS);
                 break;
@@ -210,6 +216,7 @@ public class KeyHandler implements DeviceKeyHandler {
             mVibrator.vibrate(50);
     }
 
+    /**
     private SharedPreferences getGestureSharedPreferences() {
         return mGestureContext.getSharedPreferences(
                 ScreenOffGesture.GESTURE_SETTINGS,
@@ -264,5 +271,5 @@ public class KeyHandler implements DeviceKeyHandler {
 
         }, mProximitySensor, SensorManager.SENSOR_DELAY_FASTEST);
     }
-
+    */
 }
